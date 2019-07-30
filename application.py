@@ -1,16 +1,16 @@
+"""Dad joke generator"""
 import os
-from flask import Flask, request, redirect
+from flask import Flask, request
 from twilio.twiml.messaging_response import MessagingResponse
-from twilio.rest import TwilioRestClient
-import requests
-from dad_jokes import get_dad_joke
+
+from helpers import get_dad_joke
 
 application = Flask(__name__)
 
-
+"""route used for twilio phone number"""
 @application.route('/dad', methods=['GET', 'POST'])
 def incoming_sms():
-    body = request.values.get('Body', None)
+    body = request.values.get('Body', type=str)
 
     resp = MessagingResponse()
 
