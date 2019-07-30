@@ -3,7 +3,7 @@ import os
 from flask import Flask, request
 from twilio.twiml.messaging_response import MessagingResponse
 
-from helpers import get_dad_joke
+from controllers import get_dad_joke
 
 application = Flask(__name__)
 
