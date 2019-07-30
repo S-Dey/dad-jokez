@@ -10,12 +10,12 @@ application = Flask(__name__)
 """route used for twilio phone number"""
 @application.route('/dad', methods=['GET', 'POST'])
 def incoming_sms():
-    body = request.values.get('Body', type=str)
+    body = str(request.values.get('Body', type=str))
 
     resp = MessagingResponse()
 
     # determine message response
-    if body.lower() == 'dad':
+    if body.strip().lower() == 'dad':
         resp.message(get_dad_joke())
     else:
         resp.message('Text "dad" to get a random dad joke')
