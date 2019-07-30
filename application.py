@@ -5,10 +5,10 @@ from twilio.rest import TwilioRestClient
 import requests
 from dad_jokes import get_dad_joke
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 
-@app.route('/dad', methods=['GET', 'POST'])
+@application.route('/dad', methods=['GET', 'POST'])
 def incoming_sms():
     body = request.values.get('Body', None)
 
@@ -24,4 +24,4 @@ def incoming_sms():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    application.run(debug=True)
