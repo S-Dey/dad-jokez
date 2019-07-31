@@ -11,14 +11,14 @@ from settings import auth_token, outgoing_number, account_sid
 client = Client(account_sid, auth_token)
 
 
-def send():
-    send_daily_message(client, outgoing_number)
-    print('Daily jokes sent to subscribers')
-
-
-scheduler = BackgroundScheduler(timezone='utc', daemon=True)
-scheduler.add_job(send, trigger='cron', hour='14', minute='00', user='root')
-scheduler.start()
+# def send():
+#     send_daily_message(client, outgoing_number)
+#     print('Daily jokes sent to subscribers')
+#
+#
+# scheduler = BackgroundScheduler(timezone='utc', daemon=True)
+# scheduler.add_job(send, trigger='cron', hour='14', minute='00', user='root')
+# scheduler.start()
 
 
 application = Flask(__name__)
