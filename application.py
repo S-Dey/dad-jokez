@@ -29,12 +29,12 @@ def incoming_sms():
     body = str(request.values.get('Body', type=str)).strip().lower()
     incoming_number = str(request.values.get('From', type=str))
 
-    if body == 'daily' and does_number_exist(incoming_number) is False:
-        # add to db
-        add_to_sub_list(incoming_number)
-    elif (body == 'stop' or body == '9') and does_number_exist(incoming_number) is True:
-        # remove from db
-        remove_from_sub_list(incoming_number)
+    # if body == 'daily' and does_number_exist(incoming_number) is False:
+    #     # add to db
+    #     add_to_sub_list(incoming_number)
+    # elif (body == 'stop' or body == '9') and does_number_exist(incoming_number) is True:
+    #     # remove from db
+    #     remove_from_sub_list(incoming_number)
 
     resp = MessagingResponse()
     resp.message(handle_response(body))
