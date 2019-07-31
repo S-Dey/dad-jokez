@@ -17,7 +17,7 @@ def send():
 
 
 scheduler = BackgroundScheduler(timezone='utc', daemon=True)
-scheduler.add_job(send, trigger='cron', hour='14', minute='00')
+scheduler.add_job(send, trigger='cron', hour='14', minute='00', user='root')
 scheduler.start()
 
 
