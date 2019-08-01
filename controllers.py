@@ -16,7 +16,7 @@ def handle_response(body):
 
         # Twilio's API handles STOP and HELP responses, so these will do
         '9': 'You are unsubscribed from the daily dad jokes. Reply 7 for help',
-        '7': 'Dad Jokes: You may reply DAD for one random dad joke. If you\'d like to receive an automated dad joke'
+        '7': 'Dad Jokes:\n\nYou may reply DAD for one random dad joke. If you\'d like to receive an automated dad joke'
              ' once a day, reply DAILY. To stop receiving messages completely, reply STOP'
     }
 
