@@ -22,5 +22,6 @@ def remove_from_sub_list(phone_number):
 
 
 def does_number_exist(phone_number):
-    search_count = len([sub for sub in db.sub_list.find({'number': phone_number})])
-    return True if search_count > 0 else False
+    search_count = len(
+        [sub for sub in db.sub_list.find({'number': phone_number})])
+    return search_count > 0
