@@ -19,6 +19,7 @@ def remove_from_sub_list(phone_number):
         'number': phone_number
     }
     db.sub_list.delete_one(sub)
+    print(f'Removed one sub from db')
 
 
 def does_number_exist(phone_number):
