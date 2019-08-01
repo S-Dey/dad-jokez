@@ -38,7 +38,6 @@ def incoming_sms():
 
     resp = MessagingResponse()
     resp.message(handle_response(body))
-    print(body)
 
     return str(resp)
 
