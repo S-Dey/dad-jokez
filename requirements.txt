@@ -1,4 +1,4 @@
-flask==1.1.1
+flask==2.3.2
 twilio==6.29.2
 boto3==1.9.198
 requests==2.22.0
